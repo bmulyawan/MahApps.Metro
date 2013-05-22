@@ -1,4 +1,6 @@
 ---
+layout: default
+title: Getting Started - MahApps.Metro
 ---
 
 ##Getting Started
@@ -9,7 +11,8 @@
 - [Customisation](#customisation)
 - [Advanced](#advanced)
 
-###Installing MahApps.Metro
+## Installation
+
 You can install MahApps.Metro via Nuget using the GUI (right click on your project, Manage Nuget References, search for 'MahApps.Metro') or via the console:
 
 <pre class="nuget-button">Install-Package MahApps.Metro</pre>
@@ -20,13 +23,13 @@ If you wish to use the *alpha* releases of MahApps.Metro, you need to include "p
 
 or use the console (`PM> Install-Package MahApps.Metro -Pre`)
 
+## Styling a Window
 
-###Styling a Window
 There are two main approaches you can take with MahApps.Metro to style a Window, using the `MetroWindow` control, or rolling your own. For the getting started guide, we'll use `MetroWindow`, as this approach will work for a good percentage of apps and is the quickest and easiest way to get going. Rolling your own styling is covered in the later "Advanced" section.
 
 A default WPF Window with a few controls looks like the following:
 
-![](images/01_UnstyledWindow.png)
+![](/images/01_UnstyledWindow.png)
 
 Once MahApps.Metro is [installed](#installing_mahappsmetro),
 
@@ -40,7 +43,7 @@ You'll need to change the codebehind (`MainWindow.xaml.cs`, right-click the desi
 
 That being said - usually you can just drop the inheritance on a partial declaration. This basic MetroWindow will look like this:
 
-![](images/02_PartiallyStyledWindow.png)
+![](/images/02_PartiallyStyledWindow.png)
 
 This doesn't look very 'metro'-ish yet because the resources and styles need to be included. Unfortunately you need to include these resources in each Window.
 
@@ -60,13 +63,13 @@ Just under the opening MetroWindow tag, add the following
 	        </ResourceDictionary>
 	    </Window.Resources>
 	
-![](images/03_StyledWindow.png)
+![](/images/03_StyledWindow.png)
 
 And now we have a semi-decent looking window!
 
+## Explaining the MetroWindow elements
 
-###Explaining the MetroWindow elements
-![](images/04_ExplainedStyledWindow.png)
+![](/images/04_ExplainedStyledWindow.png)
 
 If you don't like the elements that are labelled, fear not, they're all optional.
 
@@ -75,9 +78,10 @@ If you don't like the elements that are labelled, fear not, they're all optional
 3. The resize grip is no longer (from 0.8 onwards) the *only* way to resize a `MetroWindow` - all edges and corners can be gripped, but given a metro window doesn't have a noticeable window "chrome" like an aero window, the resize grip can help reassure users
 4. `ShowIconOnTitleBar="true|false"` 
 
+## Customisation
 
-###Customisation
-####WindowCommands
+### WindowCommands
+
 `WindowCommands` are the minimise, maximise/restore, and close buttons. You can add your own controls to `WindowsCommands` - by default, buttons have a style automatically applied to them to make them fit in with the rest of the `WindowsCommands`. As of 0.9, you are no longer limited to just buttons, but any control. Be aware, you're responsible for styling anything other than buttons.
 
 Including this within the `MetroWindow` tag (under the `Window.Resources` section),
@@ -105,16 +109,18 @@ Including this within the `MetroWindow` tag (under the `Window.Resources` sectio
 
 Produces this window titlebar:
 
-![](images/05_WindowCommands.png)
+![](/images/05_WindowCommands.png)
 
 The foreground (link) colour of `WindowCommands` will always be white, *unless* the titlebar is disabled, in which case it will be the reverse of whatever theme you have selected. For example, using the White/Light theme, the foreground colour will be black.
 
+## Advanced
 
-###Advanced
-####Roll your own Window
+### Roll your own Window
+
 The roll your own approach is very relevant, depending on what style of app you're going for. A good example is [code52's MarkPad](http://code52.org/DownmarkerWPF/), where we needed the flexibility of rolling our own window while still using MahApps.Metro as an underlying visual framework. The key elements used were the `WindowCommands` (discussed [above](#windowcommands)), and `BorderlessWindowBehavior`.
 
-#####BorderlessWindowBehavior
+#### BorderlessWindowBehavior
+
 Add some namespace references to the opening `Window` tag:
 
 	xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"

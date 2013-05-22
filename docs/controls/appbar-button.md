@@ -5,7 +5,7 @@ title: TransitioningContentControl - MahApps.Metro
 
 # AppBarButton 
 
-> Due to issues with this control, `AppBarButton` is due to be removed for v1.0
+> Due to issues with this control, `AppBarButton` is due to be removed at some point in the future
 
 Inspired by Windows Phone 7's app bar buttons which are a circle button with text underneath.  
 

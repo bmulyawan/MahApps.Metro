@@ -3,8 +3,7 @@ layout: default
 title: TransitioningContentControl - MahApps.Metro
 ---
 
-
-#AppBarButton 
+# AppBarButton 
 
 > Due to issues with this control, `AppBarButton` is due to be removed for v1.0
 

@@ -13,6 +13,6 @@ The function is very similar to that of a checkbox, but easier to differentiate 
 
 You can bind to/set `IsChecked` to switch between the two states.  You can change the *on* and *off* labels by setting `<Controls:ToggleSwitch OnLabel="Yes" OffLabel="No" />`
 
-### TODO: examples of features
+**TODO:**  examples of features
 
-### TODO: styling the ToggleSwitch
+**TODO:** styling the ToggleSwitch

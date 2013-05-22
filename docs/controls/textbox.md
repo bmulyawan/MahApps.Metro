@@ -13,6 +13,8 @@ The easiest way (for me) would have been to add a custom control, something like
 
 ####Watermark usage
 
+**TODO:** move this to a code snippet example
+
 ``<TextBox Controls:TextboxHelper.Watermark="This is a textbox" />``
 
 Will produce a textbox that looks like the below image. The three states are *unfocussed* with no user text entered, focussed, and unfocussed with user text.
